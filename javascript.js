@@ -49,12 +49,7 @@ function playRound(humanChoice, computerChoice){
 let computerScore = 0;
 let humanScore = 0;
 
-//test
-/**playRound(getHumanChoice(), getComputerChoice());
-console.log("humanscore: " + humanScore);
-console.log("computerscore: " + computerScore);**/
-
-//play the game
+//main function to play rock paper scissors
 function playGame(){
 
     for(let i = 0; i < 5; i++){
@@ -70,6 +65,5 @@ function playGame(){
     }
 }
 
-//test2
 playGame();
 
