@@ -50,7 +50,26 @@ let computerScore = 0;
 let humanScore = 0;
 
 //test
-playRound(getHumanChoice(), getComputerChoice());
+/**playRound(getHumanChoice(), getComputerChoice());
 console.log("humanscore: " + humanScore);
-console.log("computerscore: " + computerScore);
+console.log("computerscore: " + computerScore);**/
+
+//play the game
+function playGame(){
+
+    for(let i = 0; i < 5; i++){
+        playRound(getHumanChoice(), getComputerChoice());
+        console.log("humanscore: " + humanScore);
+        console.log("computerscore: " + computerScore);
+    }
+    if(humanScore > computerScore){
+        console.log("You win!");
+    }
+    else{
+        console.log("You lose.");
+    }
+}
+
+//test2
+playGame();
 
