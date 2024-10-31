@@ -49,6 +49,21 @@ function playRound(humanChoice, computerChoice){
 let computerScore = 0;
 let humanScore = 0;
 
+const rockBtn = document.querySelector("#rock");
+const paperBtn = document.querySelector("#paper");
+const scissorsBtn = document.querySelector("#scissors");
+
+rockBtn.addEventListener("click", function(){
+    playRound("rock", getComputerChoice())
+});
+paperBtn.addEventListener("click", function(){
+    playRound("paper", getComputerChoice())
+});
+scissorsBtn.addEventListener("click", function(){
+    playRound("scissors", getComputerChoice())
+});
+
+
 //main function to play rock paper scissors
 function playGame(){
 
@@ -65,5 +80,5 @@ function playGame(){
     }
 }
 
-playGame();
+//playGame();
 
