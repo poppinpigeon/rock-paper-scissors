@@ -25,23 +25,31 @@ function getHumanChoice(){
 }
 
 function playRound(humanChoice, computerChoice){
-    console.log("Computer: " + computerChoice);
-    console.log("Human: " + humanChoice);
+    // console.log("Computer: " + computerChoice);
+    // console.log("Human: " + humanChoice);
+    const compInput = document.querySelector("#compInput");
+    compInput.textContent = "Computer: " + computerChoice;
+    const humanInput = document.querySelector("#humanInput");
+    humanInput.textContent = "Human: " + humanChoice;
 
+    const result = document.querySelector("#result");
     if(humanChoice === computerChoice){
-        console.log("It's a tie! Try again.");
+        //console.log("It's a tie! Try again.");
+        result.textContent = "It's a tie! Try again.";
         return;
     }
     //human lose
     else if((humanChoice === "rock" && computerChoice === "paper") || (humanChoice === "paper" && computerChoice === "scissors") || (humanChoice === "scissors" && computerChoice === "rock")){
         computerScore++;
-        console.log("You lose! " + computerChoice + " wins " + humanChoice + ".");
+        //console.log("You lose! " + computerChoice + " wins " + humanChoice + ".");
+        result.textContent = "You lose! " + computerChoice + " wins " + humanChoice + ".";
         return;
     }
     //human win
     else if((humanChoice === "rock" && computerChoice === "scissors") || (humanChoice === "paper" && computerChoice === "rock") || (humanChoice === "scissors" && computerChoice === "paper")){
         humanScore++;
-        console.log("You win! " + humanChoice + " wins " + computerChoice + ".");
+        //console.log("You win! " + humanChoice + " wins " + computerChoice + ".");
+        result.textContent = "You win! " + humanChoice + " wins " + computerChoice + ".";
         return;
     }
 }
